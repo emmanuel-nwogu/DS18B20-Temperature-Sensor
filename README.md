@@ -7,6 +7,6 @@ This *script* reads values from a DS18B20 Temperature Sensor connected to a rasp
 The `run` function lets you:
  * choose the delay between each reading
  * pick the file to be written to
- * choose whether to read and write 
+ * choose whether to read and write:
    * indefinitely or
    * a definite number of times with this number set with said `run` function.
