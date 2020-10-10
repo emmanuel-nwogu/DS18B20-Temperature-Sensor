@@ -41,7 +41,7 @@ def read_temp():
 
 # This funnstion is used to choose whether the script will indefinitely read
 # and write temperature values to a file 
-def run(sensorDelay, readingsFile, definite = false, numOfMeasurements = 0):
+def run(readingsFile, sensorDelay = 1, definite = false, numOfMeasurements = 0):
 
     # Clearing the readings file
     readings = open(readingsFile, 'w')
@@ -80,4 +80,4 @@ def run(sensorDelay, readingsFile, definite = false, numOfMeasurements = 0):
             
 
 READINGS_FILE = "TempSensorReadings.txt"
-run(1, READINGS_FILE)
+run(READINGS_FILE)
