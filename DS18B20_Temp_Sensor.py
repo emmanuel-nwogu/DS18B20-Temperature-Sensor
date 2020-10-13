@@ -39,7 +39,7 @@ def read_temp():
         return temp_c
     
 
-# This funnstion is used to choose whether the script will indefinitely read
+# This function is used to choose whether the script will indefinitely read
 # and write temperature values to a file 
 def run(readingsFile, sensorDelay = 1, definite = false, numOfMeasurements = 0):
 
