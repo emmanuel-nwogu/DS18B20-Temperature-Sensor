@@ -7,9 +7,13 @@ from datetime import date
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
-# Assigning the sensor's output file to device-file
+ # w1/devices/ is the directory for devices connected via 1-wire
 base_dir = '/sys/bus/w1/devices/'
-device_folder = glob.glob(base_dir + '28*')[0]
+
+# The DS18B20 ROM folder has the name format - "28-xxxxxxxxxxxx device"
+device_folder = glob.glob(base_dir + '28*')[0]  
+
+# The DS18B20 writes temperature values to the "w1_slave" file
 device_file = device_folder + '/w1_slave'
 
 # This function reads the sensor's output file
